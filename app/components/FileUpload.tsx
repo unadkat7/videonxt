@@ -17,7 +17,7 @@ interface FileUploadProps {
 
 const FileUpload = ({ onSuccess, onProgress, fileType }: FileUploadProps) => {
     
-    const [progress, setProgress] = useState(0);
+    const [uploading, setUploading] = useState(false);
     const [error, setError] = useState<null | string>(null);
 
     const fileInputRef = useRef<HTMLInputElement>(null);
@@ -37,14 +37,35 @@ const FileUpload = ({ onSuccess, onProgress, fileType }: FileUploadProps) => {
         return true;
     }
 
+    const handleFileChange = async (event: React.ChangeEvent<HTMLInputElement>) => {
+        const file = event.target.files?.[0];
+
+        if (!file || !validateFile) return;
+        
+        setUploading(true);
+        setError(null);
+
+        try {
+            const authRes = await fetch("/api/auth/imagekit-auth");
+            const auth = await authRes.json();
+        } catch (error) {
+            
+        }
+
+    } 
+    
    
 
     return (
         <>
             <input
                 type="file"
-                accept={fileType === 'video' ? "video/*" : "image/*"}
+                accept={fileType === "video" ? "video/*" : "image/*"}
                 onChange={handleFileChange}
+            />
+            {uploading && (
+                <span>Loading...</span>
+            )}
         </>
     );
 };
