@@ -68,4 +68,119 @@ It is built to deeply understand:
 ---
 
 ## 🧱 Architecture Overview
+app/
+├── api/
+│ ├── auth/
+│ └── videos/
+├── login/
+├── register/
+├── upload/
+├── page.tsx
+├── layout.tsx
+
+
+
+
+### Architecture Highlights
+- **Middleware** handles authentication globally
+- **Server Components** handle data fetching
+- **Client Components** handle forms & interactions
+- Clean separation of concerns
+
+---
+
+## 🔄 Client vs Server Components (Key Learning)
+
+### Server Components
+- Fetch data securely
+- Improve performance
+- Keep secrets on the server
+
+### Client Components
+- Handle forms & user input
+- Manage state
+- Use browser APIs
+
+`"use client"` is used **only when required**
+
+---
+
+## 🔐 Middleware (Route Protection)
+
+This project uses **Next.js Middleware** combined with **NextAuth** for centralized route protection.
+
+### Why Middleware?
+- Runs **before rendering any page**
+- Prevents unauthorized access
+- Avoids repeating auth logic in every page
+
+### Public Routes
+- `/`
+- `/login`
+- `/register`
+- `/api/auth/*`
+
+### Protected Routes
+- Video upload pages
+- Auth-required user pages
+
+Unauthenticated users are redirected to the **login page**.
+
+---
+
+## 📦 ImageKit Integration
+
+ImageKit is used for handling video uploads and delivery.
+
+### Why ImageKit?
+- Handles **large video files**
+- Built-in optimization
+- CDN-based fast delivery
+- Secure uploads via tokens
+
+This keeps the application **fast, scalable, and production-ready**.
+
+---
+
+## 🧪 Why TypeScript?
+
+TypeScript helped in:
+- Preventing runtime errors
+- Defining clear data contracts
+- Improving maintainability
+- Better editor support & autocomplete
+
+Once integrated properly, it significantly improves code quality.
+
+---
+
+## 🎯 Key Learnings
+
+Through this project, I learned:
+- How real-world Next.js applications are structured
+- How frontend and backend coexist in Next.js
+- How authentication & middleware work together
+- How to manage media uploads efficiently
+
+---
+
+## 📌 Future Enhancements
+
+- Video likes & comments
+- User profiles
+- Categories & tags
+- Infinite scrolling
+- Improved UI animations
+
+---
+
+## 🏁 Conclusion
+
+This project was built **to learn Next.js and TypeScript properly**, not just to complete a feature list.
+
+It focuses on **core concepts used in production applications**, making it a strong foundation for future projects.
+
+---
+
+⭐ If you find this project helpful, feel free to star the repository!
 
