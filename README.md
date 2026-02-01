@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎥 Video Upload Platform (Next.js Learning Project)
 
-## Getting Started
+A modern **video uploading and viewing platform** built using **Next.js**, **TypeScript**, **NextAuth**, and **ImageKit**.  
+This project was created **purely for learning purposes** to understand how real-world applications are structured using **Next.js App Router** and modern tools.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Project Purpose
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This project is **not just another CRUD app**.  
+It is built to deeply understand:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- How **Next.js App Router** works
+- How **Client & Server Components** interact
+- How authentication works using **NextAuth**
+- How to handle **secure media uploads** using **ImageKit**
+- How **TypeScript** improves reliability and developer experience
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🧠 What I Learned From This Project
 
-To learn more about Next.js, take a look at the following resources:
+- Proper **project structure** in Next.js (App Router)
+- Server-side rendering vs client-side rendering
+- Protecting routes using authentication
+- Uploading large media files efficiently
+- Writing scalable, type-safe code
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🛠 Tech Stack
 
-## Deploy on Vercel
+| Technology | Purpose |
+|---------|--------|
+| **Next.js (App Router)** | Frontend + Backend framework |
+| **TypeScript** | Type safety and better DX |
+| **NextAuth.js** | Authentication & session handling |
+| **ImageKit** | Video storage, optimization & delivery |
+| **React** | UI components |
+| **Tailwind CSS** | Styling |
+| **MongoDB / Database** | Storing user & video data |
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📁 Project Features
+
+### 🔐 Authentication (NextAuth)
+- User login & registration
+- Secure session handling
+- Protected routes
+- Middleware-based auth checks
+
+### 🎬 Video Upload (ImageKit)
+- Upload videos securely
+- Optimized delivery via CDN
+- Faster loading & streaming
+- No heavy load on own server
+
+### 🏠 Home Page
+- Fetches videos from `/api/videos`
+- Displays uploaded videos
+- Server-side data fetching
+
+### 🧩 API Routes
+- `/api/auth` → Authentication
+- `/api/videos` → Fetch & manage videos
+
+---
+
+## 🧱 Architecture Overview
+
